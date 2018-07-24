@@ -18,8 +18,7 @@ class View {
   makeMove($square) {
     this.game.playMove($square.data("pos"));
     $square.css("background-color", "white");
-    $square.text(`${mark}`);
-    // $("li").css("background-color", "white");
+    $square.text(`${this.game.board.grid[pos[0]][pos[1]]}`);
   }
 
   setupBoard() {
